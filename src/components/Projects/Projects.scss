@@ -1,0 +1,54 @@
+.projects {
+    .container-div {
+        border: 2px solid black;
+        margin: 0 15rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: calc(100vh - 10rem);
+        margin: 1.5rem;
+        gap: 15rem;
+        padding-top: 16rem;
+
+        .project-cards {
+            border: 1px solid gray;
+            border-radius: 2rem;
+            padding: 2rem 3rem;
+            text-align: center;
+
+            img {
+                width: 28rem;
+                height: 28rem;
+                border-radius: 3rem;
+                filter: drop-shadow(2px 4px 6px black);
+                margin-bottom: 1rem;
+            }
+
+            .project-title {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            .link-section {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                .btn {
+                    width: 11rem;
+                    border-radius: 2.5rem;
+                    font-size: 1.5rem;
+                    padding: 1rem 0.5rem;
+                    text-align: center;
+                    font-weight: 600;
+
+                    .link {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+    }
+}

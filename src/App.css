@@ -1,0 +1,29 @@
+.cursor {
+    width: 20px;
+    /* Match this size with JS logic */
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    /* Use 'fixed' instead of 'absolute' */
+    pointer-events: none;
+    will-change: transform;
+    z-index: 10000;
+    opacity: 1;
+    /* transition: transform 0.15s ease, background-color 0.3s ease, opacity 0.3s ease; */
+}
+
+/* Hover effect on elements */
+img:hover~.cursor,
+button:hover~.cursor,
+a:hover~.cursor,
+span:hover~.cursor {
+    background-color: white;
+}
+
+/* Remove default cursor */
+body,
+* {
+    cursor: none;
+    /* Enable custom cursor */
+}
