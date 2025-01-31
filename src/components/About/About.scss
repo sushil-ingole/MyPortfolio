@@ -1,6 +1,6 @@
+@use '../../styles/mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import '../../styles/mixins';
 
 .about {
 
@@ -74,5 +74,112 @@
             }
         }
 
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1410px) {
+        .container-div {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem;
+
+            .inner-section {
+                flex-direction: column;
+                margin: 0;
+                justify-content: space-between;
+
+                .left-section {
+                    margin-bottom: 2rem;
+
+                    img {
+                        width: 23rem;
+                        height: 25rem;
+                    }
+                }
+
+                .right-section {
+                    max-width: 70%;
+                    margin-top: 2rem;
+
+                    .about-cards {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .experience,
+                        .education {
+                            width: 48%;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    .about-text {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container-div {
+            margin: 1rem;
+
+            .inner-section {
+                .left-section {
+                    img {
+                        width: 80rem;
+                        height: 82rem;
+                    }
+                }
+
+                .right-section {
+                    max-width: 80%;
+                    margin-top: 3rem;
+
+                    .about-cards {
+
+                        .experience,
+                        .education {
+                            width: 48%;
+                            padding: 1rem 2rem;
+
+                            svg {
+                                font-size: 6rem;
+                            }
+
+                            .cards-text {
+                                display: block;
+                                padding: 0 1rem;
+                                font-size: 2.8rem;
+
+                                &:nth-of-type(2) {
+                                    font-weight: 600;
+                                    font-size: 5.2rem;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .about-text {
+                        font-size: 4.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 317px) {
+        .about-cards {
+            flex-direction: column !important;
+            gap: 2rem;
+
+            .experience,
+            .education {
+                width: 100% !important;
+            }
+        }
     }
 }

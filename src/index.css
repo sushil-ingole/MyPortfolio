@@ -49,6 +49,6 @@ body {
 /* Extra large devices (large desktops, 4K screens) */
 @media (min-width: 1200px) {
   * {
-    font-size: 10px;
+    font-size: 8px;
   }
 }

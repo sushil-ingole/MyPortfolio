@@ -1,6 +1,5 @@
 .projects {
     .container-div {
-        border: 2px solid black;
         margin: 0 15rem;
         display: flex;
         justify-content: space-evenly;
@@ -48,7 +47,66 @@
                     }
                 }
             }
+        }
+    }
 
+    /* Responsive adjustments for tablet mode */
+    @media (max-width: 992px) {
+        .container-div {
+            margin: 0 5rem;
+            gap: 5rem;
+            padding-top: 8rem;
+
+            .project-cards {
+                padding: 2.5rem 3.5rem;
+
+                img {
+                    width: 30rem;
+                    height: 30rem;
+                }
+
+                .project-title {
+                    font-size: 2.5rem;
+                }
+
+                .link-section {
+                    .btn {
+                        width: 12rem;
+                        font-size: 1.8rem;
+                        padding: 1.2rem 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Responsive adjustments for mobile mode */
+    @media (max-width: 576px) {
+        .container-div {
+            margin: 0 2rem;
+            gap: 2rem;
+            padding-top: 4rem;
+
+            .project-cards {
+                padding: 3rem 4rem;
+
+                img {
+                    width: 35rem;
+                    height: 35rem;
+                }
+
+                .project-title {
+                    font-size: 3rem;
+                }
+
+                .link-section {
+                    .btn {
+                        width: 15rem;
+                        font-size: 2rem;
+                        padding: 1.5rem 0.75rem;
+                    }
+                }
+            }
         }
     }
 }

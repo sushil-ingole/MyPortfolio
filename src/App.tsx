@@ -79,18 +79,18 @@ function App() {
     <>
       <div className="cursor" ref={cursorRef}></div>
       <Navbar />
-      <div id="home">
+      <section id="home">
         <Home />
-      </div>
-      <div id="about">
+      </section>
+      <section id="about">
         <About />
-      </div>
-      <div id="experience">
+      </section>
+      <section id="experience">
         <Experience />
-      </div>
-      <div id="projects">
+      </section>
+      <section id="projects">
         <Projects />
-      </div>
+      </section>
     </>
   );
 }
