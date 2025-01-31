@@ -7,12 +7,12 @@ import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 
 function App() {
-  const cursorRef = useRef<HTMLElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const cursor = cursorRef.current;
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (cursor) {
         const rect = cursor.getBoundingClientRect();
         const offset = rect.width / 2; // Dynamically calculate offset
