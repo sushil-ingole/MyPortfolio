@@ -27,3 +27,22 @@ body,
     cursor: none;
     /* Enable custom cursor */
 }
+
+@media (max-width: 1410px) {
+    .cursor {
+        display: none;
+    }
+
+    body,
+    * {
+        cursor: auto;
+    }
+
+    /* Hover effect on elements */
+    img:hover~.cursor,
+    button:hover~.cursor,
+    a:hover~.cursor,
+    span:hover~.cursor {
+        background-color: transparent;
+    }
+}
