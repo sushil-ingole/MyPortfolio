@@ -45,4 +45,20 @@
             }
         }
     }
+
+    @media (max-width: 992px) {
+        .footer-links {
+            gap: 3rem;
+
+            .footer-icon {
+                font-size: 6rem !important;
+            }
+        }
+
+        .footer-text {
+            .copyright {
+                font-size: 4rem !important;
+            }
+        }
+    }
 }
