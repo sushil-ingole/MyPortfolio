@@ -18,7 +18,7 @@ const Navbar = () => {
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && entry.target.id !== "footer") {
                     setActiveLink(`#${entry.target.id}`);
                 }
             });

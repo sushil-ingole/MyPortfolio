@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -90,6 +91,9 @@ function App() {
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="footer">
+        <Footer />
       </section>
     </>
   );
