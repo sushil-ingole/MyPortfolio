@@ -1,79 +1,30 @@
-import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import "./Navbar.scss";
 
 const Navbar = () => {
-    const [activeLink, setActiveLink] = useState("#home");
-
-    const handleSetActiveLink = (link: string) => {
-        setActiveLink(link);
-    };
-
-    useEffect(() => {
-        const sections = document.querySelectorAll("section");
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.2,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting && entry.target.id !== "footer") {
-                    setActiveLink(`#${entry.target.id}`);
-                }
-            });
-        }, options);
-
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-
-        return () => {
-            sections.forEach((section) => {
-                observer.unobserve(section);
-            });
-        };
-    }, []);
-
     return (
         <div className="navbar">
             <nav>
                 <ul>
                     <li>
-                        <a
-                            href="#home"
-                            className={activeLink === "#home" ? "active" : ""}
-                            onClick={() => handleSetActiveLink("#home")}
-                        >
+                        <Link to="home" smooth={true} duration={100} activeClass="active" spy={true} offset={-50}>
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#about"
-                            className={activeLink === "#about" ? "active" : ""}
-                            onClick={() => handleSetActiveLink("#about")}
-                        >
+                        <Link to="about" smooth={true} duration={100} activeClass="active" spy={true}>
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#experience"
-                            className={activeLink === "#experience" ? "active" : ""}
-                            onClick={() => handleSetActiveLink("#experience")}
-                        >
+                        <Link to="experience" smooth={true} duration={100} activeClass="active" spy={true}>
                             Experience
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#projects"
-                            className={activeLink === "#projects" ? "active" : ""}
-                            onClick={() => handleSetActiveLink("#projects")}
-                        >
+                        <Link to="projects" smooth={true} duration={100} activeClass="active" spy={true}>
                             Projects
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
