@@ -14,8 +14,8 @@ body {
 
 #home,
 #about {
-  scroll-margin-top: 8rem;
   /* Offset for fixed navbar */
+  scroll-margin-top: 8rem;
 }
 
 /* Extra small devices (phones, portrait orientation) */
