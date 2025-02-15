@@ -24,7 +24,6 @@ function App() {
 
     const handleMouseEnter = () => {
       if (cursor) {
-        // cursor.style.transition = 'all 0.1s ease';
         cursor.style.backgroundColor = 'transparent';
         cursor.style.height = '30px';
         cursor.style.width = '30px';

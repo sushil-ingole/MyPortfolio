@@ -25,7 +25,6 @@ span:hover~.cursor {
 body,
 * {
     cursor: none;
-    /* Enable custom cursor */
 }
 
 @media (max-width: 1410px) {
