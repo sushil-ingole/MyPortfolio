@@ -1,62 +1,75 @@
 import "./Projects.scss";
 
 const Projects = () => {
+    const projects = [
+        {
+            id: 1,
+            title: "Calculator",
+            image: "calculator.png",
+            github: "https://github.com/sushil-ingole/Calculator-JS",
+            liveDemo: "https://jscriptcalculator.netlify.app/",
+        },
+        {
+            id: 2,
+            title: "Blackjack Game",
+            image: "blackjack.png",
+            github: "https://github.com/sushil-ingole/BlackJackGame",
+            liveDemo: "https://blackjak.netlify.app/",
+        },
+        {
+            id: 3,
+            title: "Digital Clock",
+            image: "digitalClock.png",
+            github: "https://github.com/sushil-ingole/DigitalClock",
+            liveDemo: "https://dgtlclock.netlify.app/",
+        },
+        {
+            id: 4,
+            title: "Tic-Tac-Toe Game",
+            image: "ticTacToe.png",
+            github: "https://github.com/sushil-ingole/TicTacToe",
+            liveDemo: "https://tictactoegameplay.netlify.app/",
+        },
+        {
+            id: 5,
+            title: "Text Util",
+            image: "textUtils.png",
+            github: "https://github.com/sushil-ingole/TextUtils-React",
+            liveDemo: "https://sushil-ingole.github.io/TextUtils-React/",
+        },
+        {
+            id: 6,
+            title: "Real-time Chat App [MERN]",
+            image: "speakIn.png",
+            github: "https://github.com/sushil-ingole/SpeakIn",
+            liveDemo: "https://ichat-rxvq.onrender.com/",
+        },
+    ];
 
     return (
         <div className="projects">
             <div className="container-div">
-                <div className="project-cards">
-                    <img src="calculator.png" alt="project-thumbnail" />
-                    <p className="project-title">Calculator</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/Calculator-JS">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://jscriptcalculator.netlify.app/">Live Demo</a></button>
+                {projects.map((project) => (
+                    <div className="project-cards" key={project.id} onClick={() => window.open(project.liveDemo, "_blank")}>
+                        <img src={project.image} alt={`${project.title}-thumbnail`} />
+                        <p className="project-title">{project.title}</p>
+                        <div className="link-section">
+                            <button className="btn btn-outline-dark">
+                                <a className="link link-secondary" href={project.github} target="_blank" rel="noopener noreferrer">
+                                    Github
+                                </a>
+                            </button>
+                            <button className="btn btn-outline-dark">
+                                <a className="link link-primary" href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                                    Live Demo
+                                </a>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div className="project-cards">
-                    <img src="blackjack.png" alt="project-thumbnail" />
-                    <p className="project-title">Blackjack Game</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/BlackJackGame">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://blackjak.netlify.app/">Live Demo</a></button>
-                    </div>
-                </div>
-                <div className="project-cards">
-                    <img src="digitalClock.png" alt="project-thumbnail" />
-                    <p className="project-title">Digital Clock</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/DigitalClock">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://dgtlclock.netlify.app/">Live Demo</a></button>
-                    </div>
-                </div>
-                <div className="project-cards">
-                    <img src="ticTacToe.png" alt="project-thumbnail" />
-                    <p className="project-title">Tic-Tac-Toe Game</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/TicTacToe">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://tictactoegameplay.netlify.app/">Live Demo</a></button>
-                    </div>
-                </div>
-                <div className="project-cards">
-                    <img src="textUtils.png" alt="project-thumbnail" />
-                    <p className="project-title">Text Util</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/TextUtils-React">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://sushil-ingole.github.io/TextUtils-React/">Live Demo</a></button>
-                    </div>
-                </div>
-                <div className="project-cards">
-                    <img src="speakIn.png" alt="project-thumbnail" />
-                    <p className="project-title">Real-time Chat App [MERN]</p>
-                    <div className="link-section">
-                        <button className="btn btn-outline-dark"><a className="link link-secondary" href="https://github.com/sushil-ingole/SpeakIn">Github</a></button>
-                        <button className="btn btn-outline-dark"><a className="link link-primary" href="https://ichat-rxvq.onrender.com/">Live Demo</a></button>
-                    </div>
-                </div>
-
+                ))}
             </div>
         </div>
     );
-}
+};
 
 export default Projects;
