@@ -1,3 +1,5 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/mixins' as mixins;
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -25,7 +27,12 @@
                 transform: translateX(-500%);
                 border-radius: 7rem;
                 animation: moveTitleRight 1s forwards;
+                color: var(--text);
                 /* Ensuring initial state is off-screen */
+
+                &:hover {
+                    color: var(--text);
+                }
             }
 
             .title1 {
@@ -58,6 +65,10 @@
                 margin-right: 2rem;
                 display: inline-block;
                 animation-delay: 4s;
+
+                &:hover {
+                    color: var(--background);
+                }
             }
 
             .contact-btn {
@@ -73,16 +84,20 @@
             animation: zoomInOut 2s forwards;
             animation-delay: 6s;
 
-            img {
-                width: 33rem;
-                height: 35rem;
-                border-radius: 50%;
-                filter: drop-shadow(2px 4px 6px black);
+            .image-wrapper {
                 transition: transform 0.3s ease, filter 0.3s ease;
                 animation: moveImageLeft 1s forwards;
+                animation-fill-mode: forwards;
 
-                &:hover {
-                    transform: scale(1.1);
+                img {
+                    width: 33rem;
+                    height: 35rem;
+                    border-radius: 50%;
+                    filter: drop-shadow(2px 4px 6px var(--border));
+
+                    &:hover {
+                        @include mixins.img-scale(1.04);
+                    }
                 }
             }
 
@@ -124,7 +139,7 @@
             align-items: center;
             text-align: center;
             min-height: calc(100vh - 10rem);
-            margin: 9.5rem 1.5rem;
+            margin: 6.3rem 1.5rem;
             justify-content: center;
 
             .left-section {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import About from './components/About/About';
 import Home from './components/Home/Home';
@@ -8,10 +8,17 @@ import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const cursorRef = useRef<HTMLDivElement>(null);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+  };
 
   useEffect(() => {
     const cursor = cursorRef.current;
+
 
     const handleMouseMove = (e: MouseEvent) => {
       if (cursor) {
@@ -78,7 +85,7 @@ function App() {
   return (
     <>
       <div className="cursor" ref={cursorRef}></div>
-      <Navbar />
+      <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <section id="home">
         <Home />
       </section>

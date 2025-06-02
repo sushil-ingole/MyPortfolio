@@ -12,11 +12,13 @@ const Home = () => {
                         <button type="button" className="btn btn-outline-dark dwnld-cv-btn">Download CV</button>
                     </a>
                     <a href="tel:+917057879165">
-                        <button type="button" className="btn btn-dark contact-btn">Contact Info</button>
+                        <button type="button" className="btn btn-outline-dark contact-btn">Contact Info</button>
                     </a>
                 </div>
                 <div className="right-section">
-                    <img src="sushil-photo.jpg" alt="Photo" />
+                    <div className="image-wrapper">
+                        <img src="sushil-photo.jpg" alt="Photo" />
+                    </div>
                 </div>
             </div>
         </div>

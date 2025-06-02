@@ -8,7 +8,7 @@ const About = () => {
             <div className="container-div">
                 <div className="inner-section">
                     <div className="left-section">
-                        <img src="sushil-photo2.webp" alt="Photo" />
+                        <img src="sushil-photo2.jpg" alt="Photo" />
                     </div>
                     <div className="right-section">
                         <div className="about-cards">
@@ -26,7 +26,7 @@ const About = () => {
                             </div>
                         </div>
                         <span className="about-text">
-                            A passionate full-stack developer with a love for creating
+                            A passionate web developer with a love for creating
                             captivating frontend experiences. Hailing from Akola, Maharashtra,
                             I completed my graduation in Information Technology in 2021. Since then,
                             I've been crafting seamless web applications, and my journey is just getting started!
@@ -38,30 +38,4 @@ const About = () => {
     );
 }
 
-// const About = () => {
-
-//     return (
-//         <div className="about">
-//             <div className="container-div">
-//                 <div className="main-section">
-//                     <span className="text1 highlight">
-//                         A passionate full-stack developer with a love for creating
-//                         captivating frontend experiences. Hailing from Akola, Maharashtra,
-//                         I completed my graduation in Information Technology in 2021. Since then,
-//                         I've been crafting seamless web applications, and my journey is just getting started!
-//                     </span>
-//                     <br />
-//                 </div>
-//             </div>
-//         </div >
-//     );
-// };
-
 export default About;
-
-{/* <div className="skills-section text-center">
-                    <span className="text1 font-extrabold">My Skills 🛠️:</span><br />
-                    <div className="skill-details">
-                        <span className="text2"><strong>Languages:</strong> HTML, CSS, TypeScript, JavaScript, Angular, React. Express.js, Node.js, MongoDB, PostgreSQL</span>
-                    </div>
-                </div> */}

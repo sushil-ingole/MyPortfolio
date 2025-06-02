@@ -1,7 +1,8 @@
 import { Link } from "react-scroll";
 import "./Navbar.scss";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, isDarkMode }: { toggleDarkMode: () => void; isDarkMode: boolean }) => {
     return (
         <div className="navbar">
             <nav>
@@ -27,6 +28,14 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
+                <div className="checkbox-container">
+                    <input type="checkbox" className="checkbox" id="checkbox" onChange={toggleDarkMode} />
+                    <label htmlFor="checkbox" className="checkbox-label">
+                        <FaMoon className="fas fa-moon" />
+                        <FaSun className="fas fa-sun" />
+                        <span className="ball"></span>
+                    </label>
+                </div>
             </nav>
         </div>
     );

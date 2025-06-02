@@ -1,3 +1,5 @@
+@use '../../styles/mixins' as mixins;
+
 .experience {
     .container-div {
         margin: 0 15rem;
@@ -17,14 +19,18 @@
 
             .frontend,
             .backend {
-                border: 1px solid gray;
+                border: 1px solid var(--border);
+                /* Dynamic border color */
                 border-radius: 2rem;
                 padding: 1.5rem 5rem;
                 text-align: center;
+                background-color: var(--background);
+                box-shadow: 1px 1px 10px 1px var(--border);
 
                 .exp-title {
                     font-size: 3rem;
                     font-weight: 700;
+                    color: var(--text);
                 }
 
                 .inner-container {
@@ -39,14 +45,18 @@
                         padding: 1rem 0;
 
                         img {
-                            width: 3rem;
-                            height: 3rem;
+                            width: 2.3rem;
+                            height: 2.3rem;
                         }
-
 
                         .cards-text {
                             padding: 0 1rem;
                             font-size: 1.8rem;
+                            color: var(--text);
+
+                            &:hover {
+                                @include mixins.img-scale(1.1);
+                            }
                         }
                     }
                 }
@@ -59,14 +69,16 @@
         .frontend,
         .backend {
             padding: 5.5rem 9rem !important;
+            padding: 2.5rem 1rem !important;
 
             .exp-title {
                 font-size: 6rem !important;
+                color: var(--text);
+                /* Dynamic text color */
             }
 
             .inner-container {
                 .skill-card {
-
                     img {
                         width: 5rem !important;
                         height: 5rem !important;
@@ -75,6 +87,8 @@
                     .cards-text {
                         padding: 0 3rem !important;
                         font-size: 4.8rem !important;
+                        color: var(--text);
+                        /* Dynamic text color */
                     }
                 }
             }

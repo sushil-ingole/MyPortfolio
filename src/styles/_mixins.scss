@@ -4,3 +4,8 @@
     -webkit-transform: scale(-1, 1);
     transform: scale(-1, 1);
 }
+
+@mixin img-scale($val) {
+    transition: transform 0.2s ease-in-out;
+    transform: scale($val) !important;
+}

@@ -1,15 +1,15 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/colors' as colors;
+@use '../../styles/mixins' as mixins;
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 .about {
-
     .container-div {
         margin: 0 15rem;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        min-height: calc(100vh - 10rem);
+        min-height: calc(100vh - 3rem);
         margin: 1.5rem;
 
         .inner-section {
@@ -27,9 +27,11 @@
                     width: 36rem;
                     height: 35rem;
                     border-radius: 3rem;
-                    filter: drop-shadow(2px 4px 6px black);
-                    filter: grayscale(1);
-                    @include img-hor;
+                    filter: drop-shadow(2px 4px 6px var(--border));
+
+                    &:hover {
+                        @include mixins.img-scale(1.04);
+                    }
                 }
             }
 
@@ -46,23 +48,26 @@
                     .experience,
                     .education {
                         width: 48%;
-                        border: 1px solid gray;
+                        border: 1px solid var(--border);
                         border-radius: 2rem;
                         padding: 6.5rem 5rem;
                         text-align: center;
+                        box-shadow: 1px 1px 10px 1px var(--border);
 
                         svg {
                             font-size: 3rem;
+                            color: var(--link);
                         }
 
                         .cards-text {
                             display: block;
                             padding: 0 1rem;
                             font-size: 1.8rem;
+                            color: var(--text);
 
                             &:nth-of-type(2) {
                                 font-weight: 600;
-                                font-size: 2.2rem;
+                                font-size: 3rem;
                             }
                         }
                     }
@@ -71,10 +76,10 @@
                 .about-text {
                     font-size: 1.8rem;
                     text-align: justify;
+                    color: var(--text);
                 }
             }
         }
-
     }
 
     @media (max-width: 1410px) {
@@ -90,7 +95,7 @@
                 justify-content: space-between;
 
                 .left-section {
-                    margin-bottom: 2rem;
+                    margin-bottom: 5rem;
 
                     img {
                         width: 23rem;
@@ -115,7 +120,58 @@
                     }
 
                     .about-text {
-                        font-size: 1.5rem;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-div {
+            margin: 1rem;
+
+            .inner-section {
+                .left-section {
+                    img {
+                        width: 40rem;
+                        height: 42rem;
+                    }
+                }
+
+                .right-section {
+                    max-width: 80%;
+                    margin-top: 3rem;
+
+                    .about-cards {
+
+                        .experience,
+                        .education {
+                            width: 48%;
+                            padding: 1rem 2rem;
+
+                            svg {
+                                font-size: 6rem;
+                                color: var(--link);
+                            }
+
+                            .cards-text {
+                                display: block;
+                                padding: 0 1rem;
+                                font-size: 2.8rem;
+                                color: var(--text);
+
+                                &:nth-of-type(2) {
+                                    font-weight: 600;
+                                    font-size: 5.2rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .about-text {
+                        font-size: 4.2rem;
+                        color: var(--text);
                     }
                 }
             }
@@ -147,12 +203,14 @@
 
                             svg {
                                 font-size: 6rem;
+                                color: var(--link);
                             }
 
                             .cards-text {
                                 display: block;
                                 padding: 0 1rem;
                                 font-size: 2.8rem;
+                                color: var(--text);
 
                                 &:nth-of-type(2) {
                                     font-weight: 600;
@@ -160,11 +218,11 @@
                                 }
                             }
                         }
-
                     }
 
                     .about-text {
                         font-size: 4.2rem;
+                        color: var(--text);
                     }
                 }
             }

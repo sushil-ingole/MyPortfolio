@@ -16,7 +16,6 @@ const Footer = () => {
                     </a>
                     <a href="mailto:sushilingole2024@gmail.com">
                         <FaEnvelope className="footer-icon" />
-
                     </a>
                 </div>
                 <div className="footer-text">

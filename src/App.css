@@ -1,3 +1,44 @@
+/* :root {
+    --light-background: #ffffff;
+    --light-text: #333333;
+    --light-link: #000000;
+    --light-link-hover: #dddddd;
+    --light-border: #a4a3a3;
+
+    --dark-background: #333333;
+    --dark-text: #ffffff;
+    --dark-link: #ffffff;
+    --dark-link-hover: #aaaaaa;
+    --dark-border: #444444;
+} */
+
+:root {
+    --background: #f9f9f9;
+    --text: #2d2d2d;
+    --link: #0077cc;
+    --link-hover: #005fa3;
+    --border: #2c2c2c;
+}
+
+body.dark-mode {
+    --background: #222222;
+    --text: #eaeaea;
+    --link: #4ea1d3;
+    --link-hover: #3a8bb5;
+    --border: #f9f9f9;
+    /* Fixed border color */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body.dark-mode {
+    background-color: var(--background);
+    color: var(--text);
+}
+
 .cursor {
     width: 20px;
     /* Match this size with JS logic */

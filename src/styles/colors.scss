@@ -1,0 +1,30 @@
+// Fixed border color
+$fixed-border: #2c2c2c; // A slightly lighter dark gray for better visibility
+
+// Light mode colors
+$light-background: #f9f9f9; // Softer white for less strain on the eyes
+$light-text: #2d2d2d; // Dark gray for better readability
+$light-link: #0077cc; // Blue for links to make them stand out
+$light-link-hover: #005fa3; // Darker blue for hover effects
+
+// Dark mode colors
+$dark-background: #1e1e1e; // Deep gray for a modern dark mode
+$dark-text: #eaeaea; // Light gray for readability without being too bright
+$dark-link: #4ea1d3; // Soft blue for links in dark mode
+$dark-link-hover: #3a8bb5; // Slightly darker blue for hover effects
+
+// Export variables for use
+$background: $light-background;
+$text: $light-text;
+$link: $light-link;
+$link-hover: $light-link-hover;
+$border: $fixed-border; // Always use the fixed border color
+
+// Mixin for dark mode
+@mixin dark-mode {
+    $background: $dark-background;
+    $text: $dark-text;
+    $link: $dark-link;
+    $link-hover: $dark-link-hover;
+    $border: $fixed-border; // Keep border consistent across modes
+}
