@@ -67,7 +67,12 @@
                 animation-delay: 4s;
 
                 &:hover {
+                    background-color: var(--link-hover);
                     color: var(--background);
+
+                    .link {
+                        color: var(--background);
+                    }
                 }
             }
 

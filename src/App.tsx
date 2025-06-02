@@ -12,9 +12,20 @@ function App() {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark-mode', !isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.body.classList.toggle('dark-mode', newMode);
+    localStorage.setItem('darkMode', JSON.stringify(newMode));
   };
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode !== null) {
+      const isDark = JSON.parse(savedMode);
+      setIsDarkMode(isDark);
+      document.body.classList.toggle('dark-mode', isDark);
+    }
+  }, []);
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -85,7 +96,7 @@ function App() {
   return (
     <>
       <div className="cursor" ref={cursorRef}></div>
-      <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+      <Navbar toggleDarkMode={toggleDarkMode} darkMode={isDarkMode} />
       <section id="home">
         <Home />
       </section>
