@@ -66,7 +66,7 @@
 
         .checkbox-container {
             position: absolute;
-            right: 0;
+            right: 1rem;
             font-size: 1.5rem;
             padding: 0.5rem 1rem;
             cursor: pointer;
@@ -82,7 +82,7 @@
                 height: 3.3rem;
                 border-radius: 50px;
                 position: relative;
-                padding: 5px;
+                padding: 0.4rem 0.4rem 0.11rem;
                 cursor: pointer;
                 display: flex;
                 justify-content: space-between;
@@ -116,6 +116,12 @@
             .checkbox:checked+.checkbox-label .ball {
                 transform: translateX(3rem);
             }
+        }
+    }
+
+    @media (max-width: 1410px) {
+        ul {
+            gap: 15rem !important;
         }
     }
 }
